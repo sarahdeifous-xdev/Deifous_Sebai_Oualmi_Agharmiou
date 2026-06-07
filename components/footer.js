@@ -18,10 +18,10 @@ const footer = `
       <div class="title">Boutique</div>
 
       <div class="links">
-        <a href="#">Tous les produits</a>
-        <a href="#">Boissons chaudes</a>
-        <a href="#">Boissons froides</a>
-        <a href="#">Grains de café</a>
+        <a href="#" onclick="filterProducts('Tous')">Tous les produits</a>
+        <a href="#" onclick="filterProducts('Cafés')">Cafés</a>
+        <a href="#" onclick="filterProducts('Pâtisseries')">Pâtisseries</a>
+        <a href="#" onclick="filterProducts('Boissons froides')">Boissons froides</a>
       </div>
     </div>
 
