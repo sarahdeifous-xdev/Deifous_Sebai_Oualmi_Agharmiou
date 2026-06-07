@@ -12,9 +12,7 @@ Les données utilisateur sont stockées localement dans le **LocalStorage** du n
 ## 🚀 Fonctionnalités
 
 - Affichage dynamique du menu
-- Filtrage des produits par catégories :
-- Cafés
-- Pâtisseries
+- Filtrage des produits par catégories exemple : Cafés, Pâtisseries, etc.
 - Simulation de prise de commande
 - Système d’inscription (front-end uniquement)
 - Système de connexion (front-end uniquement)
