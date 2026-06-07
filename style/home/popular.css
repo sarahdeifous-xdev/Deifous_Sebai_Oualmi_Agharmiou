@@ -1,0 +1,51 @@
+.popular {
+    margin-top: var(--space-2xl);
+    width: 100%
+}
+
+.popular .container {
+    width: 100%;
+    gap: var(--space-md);
+}
+
+.popular .header {
+    text-align: center;
+}
+.popular .tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: var(--text-sm);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+.popular .title {
+    font-family: "Playfair Display", serif;
+    font-size: var(--text-3xl);
+   font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: var(--space-xs);
+}
+.popular .title em {
+    font-style: italic;
+    color: var(--accent);
+}
+.popular .subtitle {
+    color: var(--text2);
+    font-size: var(--text-sm);
+    max-width: var(--screen-xs);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.popular .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.popular .action {
+    margin-top: var(--space-xl);
+}

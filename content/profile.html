@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Profil | Le Grain Doré</title>
+    <script type="module" src="/components/sidebar.js"></script>
+    <script type="module" src="/components/header.js"></script>
+
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/header.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
+    <link rel="stylesheet" href="/style/flex.css" />
+    <link rel="stylesheet" href="/style/button.css" />
+    <link rel="stylesheet" href="/style/sidebar.css" />
+
+    <link rel="stylesheet" href="/style/profile/index.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div id="cart-sidebar" class="cart-sidebar"></div>
+
+    <main class="profile">
+      <div class="container">
+        <div id="profile-big-avatar" class="profile-avatar">-</div>
+
+        <h2 class="profile-title">Espace Fidélité Club</h2>
+
+        <p id="profile-email" class="profile-email"></p>
+
+        <div class="profile-card">
+          <p><strong>Statut de compte :</strong> Membre Privilège ☕</p>
+          <p><strong>Points Fidélité :</strong> 142 points</p>
+
+          <p class="profile-progress">Prochain café offert à 150 points !</p>
+        </div>
+
+        <button class="profile-logout-btn" onclick="deconnexionUser()">
+          Se Déconnecter de l'appareil
+        </button>
+      </div>
+    </main>
+
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/panier.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sessionActive = localStorage.getItem("sessionActive");
+        if (!sessionActive) {
+          alert("Accès refusé. Veuillez vous connecter.");
+          window.location.href = "connexion.html";
+          return;
+        }
+        document.getElementById("profile-email").innerText = sessionActive;
+        document.getElementById("profile-big-avatar").innerText = sessionActive
+          .charAt(0)
+          .toUpperCase();
+      });
+    </script>
+  </body>
+</html>

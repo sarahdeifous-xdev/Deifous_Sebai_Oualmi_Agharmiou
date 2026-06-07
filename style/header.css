@@ -1,0 +1,212 @@
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: var(--border-xs) solid var(--border);
+  backdrop-filter: blur(0.75rem);
+}
+
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--screen-xl);
+  padding: var(--padding-xs) var(--padding-md);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header-container .brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: var(--space-xs);
+}
+
+.header-container .logo {
+  font-family: serif;
+  font-size: var(--text-xl);
+  color: var(--accent);
+}
+
+.header-container .subtitle {
+  color: var(--text2);
+  font-size: var(--text-2xs);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.header-container .nav-links {
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container li {
+  list-style: none;
+}
+
+.header-container .nav-link {
+  padding: var(--padding-xs) var(--padding-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  color: var(--text2);
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header-container .nav-link:hover,
+.header-container .nav-link.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.header-container .actions-container {
+  gap: var(--space-sm);
+  padding: 0;
+  margin: 0;
+}
+
+.header-container .cart-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.header-container .cart-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header-container .cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--danger);
+  color: var(--text);
+  font-size: var(--text-xs);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+  line-height: 1;
+}
+
+.guest-only,
+.logged-only {
+  display: none;
+}
+
+[data-auth="guest"] .guest-only {
+  display: flex;
+}
+
+[data-auth="logged"] .logged-only {
+  display: flex;
+}
+
+.user-profile-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c07a3a, #8b4a1f);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  min-width: 160px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 999;
+}
+
+.user-profile-container:hover .profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.profile-dropdown a:hover {
+  background: #f3f3f3;
+}
+
+.logout-btn {
+
+justify-content: start;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #c0392b;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #ffeaea;
+}

@@ -1,0 +1,117 @@
+.signin, .signup {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--padding-xl);
+}
+
+.signin .login-container, .signup .container {
+  background-color: var(--surface);
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: var(--padding-xl) var(--padding-lg);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--card-shadow);
+
+  border: var(--border-xs) solid var(--border);
+
+  transition: transform var(--transition);
+}
+
+.signin .login-container:hover, .signup .container:hover {
+  transform: translateY(-4px);
+}
+
+.signin .login-title, .signup .title {
+  font-size: var(--text-2xl);
+  color: var(--accent);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.signin .login-form, .signup .form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.signin .form-group, .signup .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.signin .label, .signup .label {
+  font-size: var(--text-sm);
+  color: var(--text2);
+  font-weight: 500;
+}
+
+input {
+  background-color: var(--bg3);
+  border: var(--border-xs) solid var(--border);
+  color: var(--text);
+  padding: var(--padding-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+  outline: none;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--text2);
+  opacity: 0.4;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 var(--border-md) var(--accent-soft);
+}
+
+.btn {
+  margin-top: var(--space-sm);
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: var(--padding-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--accent2);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.login-msg {
+  margin-top: var(--space-xs);
+  font-size: var(--text-xs);
+  text-align: center;
+  min-height: 1.5em;
+}
+
+.msg-error {
+  color: var(--danger);
+}
+.msg-success {
+  color: var(--success);
+}

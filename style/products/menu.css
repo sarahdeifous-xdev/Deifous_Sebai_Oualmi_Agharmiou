@@ -1,0 +1,112 @@
+.products {
+  width: 100%;
+  margin-top: var(--space-xl);
+}
+
+.products .container {
+  width: 100%;
+  max-width: var(--screen-xl);
+
+  gap: var(--space-md);
+}
+
+.products .filter-bar {
+  gap: var(--space-xs);
+}
+
+#product-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.product-card {
+  background: var(--bg2);
+  border: var(--border-xs) solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+  position: relative;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow);
+  border-color: var(--accent);
+}
+.product-visual {
+  height: 200px;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.product-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover .product-visual img {
+  transform: scale(1.07);
+}
+
+.product-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.45));
+  z-index: 1;
+}
+
+.product-body {
+  padding: var(--space-md);
+}
+
+.product-title {
+  font-family: serif;
+  font-size: var(--text-md);
+  font-weight: bold;
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+.product-subtitle {
+  font-size: var(--text-xs);
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+.product-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-price {
+  font-size: var(--text-2xs);
+  font-weight: bold;
+  color: var(--accent);
+  font-family: serif;
+}
+
+.product-buy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--accent-soft);
+  border: var(--border-xs) solid var(--accent);
+  color: var(--accent);
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-2xs);
+  font-weight: bold;
+  transition: all var(--transition);
+}
+.product-buy:hover {
+  background: var(--accent);
+  color: var(--text);
+  transform: scale(1.05);
+}

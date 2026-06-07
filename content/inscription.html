@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejoindre le Club | Le Grain Doré</title>
+
+    <script type="module" src="/components/sidebar.js"></script>
+    <script type="module" src="/components/header.js"></script>
+
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/header.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
+    <link rel="stylesheet" href="/style/flex.css" />
+    <link rel="stylesheet" href="/style/button.css" />
+    <link rel="stylesheet" href="/style/sidebar.css" />
+
+    <link rel="stylesheet" href="/style/auth/signin.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div id="cart-sidebar" class="cart-sidebar"></div>
+
+    <main class="signup">
+      <section class="container">
+        <h2 class="title">Créer un compte</h2>
+
+        <form id="signup-form" class="form">
+          <div class="form-group">
+            <label for="email">Adresse Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="exemple@mail.com"
+              required
+            />
+            <span id="email-error" class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="6 caractères minimum dont 1 chiffre"
+              required
+            />
+            <span id="password-error" class="error-msg"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">S'inscrire</button>
+          <p id="register-msg"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/panier.js"></script>
+  </body>
+</html>

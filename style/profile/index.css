@@ -1,0 +1,147 @@
+.profile {
+ 
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile .container {
+
+  background-color: var(--surface);
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: var(--padding-xl) var(--padding-lg);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--card-shadow);
+
+  border: var(--border-xs) solid var(--border);
+
+  transition: transform var(--transition);
+
+  text-align: center;
+
+}
+
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto var(--space-lg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+  color: var(--bg);
+
+  font-size: var(--text-2xl);
+  font-weight: 700;
+
+  border: var(--border-md) solid var(--bg3);
+
+  transition: var(--transition);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-title {
+  color: var(--text);
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.profile-email {
+  color: var(--text2);
+  font-size: var(--text-md);
+  font-weight: 500;
+
+  margin-bottom: var(--space-xl);
+
+  word-break: break-word;
+}
+
+.profile-card {
+  background: var(--bg3);
+
+  border: var(--border-xs) solid var(--border);
+  border-radius: var(--radius-md);
+
+  padding: var(--padding-lg);
+
+  text-align: left;
+
+  margin-bottom: var(--space-xl);
+}
+
+.profile-card p {
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.profile-card p:last-child {
+  margin-bottom: 0;
+}
+
+.profile-card strong {
+  color: var(--accent2);
+}
+
+.profile-progress {
+  color: var(--text2);
+  font-size: var(--text-xs);
+}
+
+.profile-logout-btn {
+  width: 100%;
+  padding: var(--padding-md);
+
+  background: var(--danger);
+  color: var(--text);
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  font-size: var(--text-sm);
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.profile-logout-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.profile-logout-btn:active {
+  transform: translateY(0);
+}
+
+
+@media (max-width: 640px) {
+  .profile-page {
+    margin: var(--space-lg);
+    padding: var(--padding-lg);
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: var(--text-xl);
+  }
+
+  .profile-title {
+    font-size: var(--text-lg);
+  }
+}

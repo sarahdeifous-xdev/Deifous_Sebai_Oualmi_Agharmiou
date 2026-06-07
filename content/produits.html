@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Carte | Le Grain Doré</title>
+    <script type="module" src="/components/sidebar.js"></script>
+    <script type="module" src="/components/header.js"></script>
+    <script type="module" src="/components/footer.js"></script>
+
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/header.css" />
+    <link rel="stylesheet" href="/style/footer.css" />
+    <link rel="stylesheet" href="/style/flex.css" />
+    <link rel="stylesheet" href="/style/button.css" />
+    <link rel="stylesheet" href="/style/sidebar.css" />
+
+    <link rel="stylesheet" href="/style/products/top-bar.css" />
+    <link rel="stylesheet" href="/style/products/menu.css" />
+  </head>
+  <body>
+    <main>
+      <header class="row-center-center" id="header"></header>
+
+      <section class="top-bar col-center-center">
+        <div class="container">
+          <div class="tag">Notre Menu</div>
+          <h1 class="title">Découvrez <em> Chaque Gorgée </em></h1>
+          <p class="subtitle">
+            De l'espresso classique aux origines exotiques.
+          </p>
+        </div>
+      </section>
+
+      <section id="cart-sidebar" class="cart-sidebar"></section>
+
+      <section class="products col-center-center">
+        <div class="container col-start-center">
+          <div class="filter-bar row-center-start">
+            <button class="btn-ghost" onclick="filtrerProduits('Tous')">
+              Tout
+            </button>
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Cafés')"
+            >
+              Cafés
+            </button>
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Pâtisseries')"
+            >
+              Pâtisseries
+            </button>
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Boissons froides')"
+            >
+              Boissons froides
+            </button>
+
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Thés')"
+            >
+              Thés
+            </button>
+
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Boissons chaudes')"
+            >
+              Boissons chaudes
+            </button>
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Snacks')"
+            >
+              Snacks
+            </button>
+
+            <button
+              class="btn-ghost"
+              style="background-color: var(--main-brown)"
+              onclick="filtrerProduits('Grains de café')"
+            >
+              Grains de café
+            </button>
+          </div>
+
+          <div id="product-grid"></div>
+        </div>
+      </section>
+      <footer id="footer"></footer>
+    </main>
+
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/produits.js"></script>
+    <script src="../javascript/panier.js"></script>
+  </body>
+</html>

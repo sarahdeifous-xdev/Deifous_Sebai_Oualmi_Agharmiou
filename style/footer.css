@@ -1,0 +1,89 @@
+/* FOOTER */
+footer {
+  margin-top: var(--space-2xl);
+  width: 100%;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: var(--padding-xl) var(--padding-md) var(--padding-xs);
+}
+
+footer .container {
+  margin: 0 auto;
+  max-width: var(--screen-xl);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-areas: "brand shop company support" "bottom bottom bottom bottom";
+}
+
+footer .container .brand {
+  grid-area: brand;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+footer .container .brand .logo {
+  font-size: var(--text-xl);
+  color: var(--accent);
+}
+
+footer .container .brand .subtitle {
+  font-size: var(--text-xs);
+  color: var(--text2);
+  max-width: var(--screen-xs);
+}
+
+footer .container .brand .socials {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+footer .container .shop {
+  grid-area: shop;
+}
+
+footer .container .company {
+  grid-area: company;
+}
+
+footer .container .support {
+  grid-area: support;
+}
+
+footer .container .title {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--text2);
+  margin-bottom: var(--space-sm);
+}
+
+footer .container .links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--text-2xs);
+  text-decoration: none;
+}
+
+footer .container .links a:hover {
+  color: var(--accent);
+}
+
+footer .container .bottom {
+  margin-top: var(--space-sm);
+  grid-area: bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-md) 0;
+  border-top: var(--border-xs) solid var(--border);
+  font-size: var(--text-xs);
+  color: var(--text2);
+}
+
+footer .container .bottom .legal {
+  gap: var(--space-sm);
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tizi Café| Café Artisanal</title>
+    <script type="module" src="/components/sidebar.js"></script>
+    <script type="module" src="/components/header.js"></script>
+    <script type="module" src="/components/footer.js"></script>
+
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/flex.css" />
+    <link rel="stylesheet" href="style/button.css" />
+    <link rel="stylesheet" href="style/sidebar.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+
+    <link rel="stylesheet" href="style/home/popular.css" />
+    <link rel="stylesheet" href="style/home/featured.css" />
+    <link rel="stylesheet" href="style/home/hero.css" />
+    <link rel="stylesheet" href="style/products/menu.css" />
+  </head>
+  <body>
+    <div id="cart-sidebar" class="cart-sidebar"></div>
+
+    <main>
+      <header class="row-center-center" id="header"></header>
+
+      <section class="hero">
+        <div class="container">
+          <!--Content-->
+          <div class="content">
+            <!--Tag-->
+            <span class="tag">Café de spécialité depuis 2015</span>
+            <!--Title-->
+            <h2 class="title">
+              Conçu pour<br />les <em>Audacieux</em><br />& les Curieux
+            </h2>
+            <!--Subtitle-->
+            <p class="subtitle">
+              Des cafés d'origine unique préparés à la main aux savoureux
+              mélanges de spécialité, chaque tasse est un rituel qui mérite
+              d'être savouré.
+            </p>
+            <!--Action-->
+            <div class="action row-center-start">
+              <button class="btn-accent">
+                <span>Explorer le menu</span>
+                →
+              </button>
+              <button class="btn-ghost">
+                <span>Notre histoire</span>
+              </button>
+            </div>
+          </div>
+
+          <!--Visual-->
+          <div class="visual">
+            <!--Image-->
+            <img
+              src="/images/home/hero.jpg"
+              alt="A beautifully crafted cappuccino with intricate latte art in a black ceramic mug on a dark surface."
+              class="img"
+            />
+          </div>
+
+          <!--Stats-->
+          <div class="stats">
+            <ul>
+              <li>40+</li>
+              <li>Mélanges signature</li>
+            </ul>
+            <ul>
+              <li>12</li>
+              <li>Origines certifiées</li>
+            </ul>
+            <ul>
+              <li>50K</li>
+              <li>Des clients satisfaits</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <div class="container">
+          <!--Content-->
+          <div class="content">
+            <div class="tag">À l'affiche cette saison</div>
+            <div class="title">
+              Yirgacheffe éthiopien<br /><em>Origine unique</em>
+            </div>
+            <div class="description">
+              Un café torréfié clair d'une complexité remarquable, doté d'une
+              acidité naturelle rappelant celle du vin, avec des notes vives de
+              myrtille et de jasmin. Cueilli à la main dans des plantations
+              d'altitude de la zone de Gedeo.
+            </div>
+
+            <div class="meta">
+              <ul>
+                <li>Origine</li>
+                <li>Éthiopie</li>
+              </ul>
+
+              <ul>
+                <li>Rôti</li>
+                <li>Lumière</li>
+              </ul>
+
+              <ul>
+                <li>Processus</li>
+                <li>Lavé</li>
+              </ul>
+            </div>
+            <a href="/content/produits.html">
+              <button class="btn-accent">
+                <span> Acheter maintenant </span> →
+              </button>
+            </a>
+          </div>
+
+          <!--Visual-->
+          <div class="visual row-center-end">
+            <img
+              src="/images/home/featured.jpeg"
+              alt="Detailed image of roasted coffee beans creating a rich, textured pattern perfect for food photography."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="popular col-center-center">
+        <div class="container col-center-center">
+          <!--Header-->
+          <div class="header">
+            <div class="tag">Sélection populaire</div>
+            <h2 class="title">Client <em>Favoris</em></h2>
+            <p class="subtitle">
+              Sélectionnés avec soin par notre communauté, voici les boissons et
+              les grains de café que les gens ne cessent de commander.
+            </p>
+          </div>
+          <!--List-->
+          <div class="list" id="popular-grid"></div>
+          <!--Action-->
+          <div class="action">
+            <button class="btn-ghost">
+              <span>Voir le menu complet</span>
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer"></footer>
+    </main>
+
+    <script src="/javascript/auth.js"></script>
+    <script src="/javascript/panier.js"></script>
+    <script src="/javascript/popular.js"></script>
+  </body>
+</html>
