@@ -45,7 +45,7 @@ const header = `
     <ul class="nav-links row-center-center">
 
 <a href="/" class="${isActive("/")}">Accueil</a>
-<a href="/content/produits" class="${isActive("/content/produits")}">Les produits</a>
+<a href="/content/produits.html" class="${isActive("/content/produits.html")}">Les produits</a>
       
 
     </ul>
