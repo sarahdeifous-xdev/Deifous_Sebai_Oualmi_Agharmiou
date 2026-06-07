@@ -34,7 +34,7 @@ function updateHeaderAuthState() {
   }
 }
 
-const registerForm = document.getElementById("register-form");
+const registerForm = document.getElementById("signup-form");
 
 if (registerForm) {
   registerForm.addEventListener("submit", (e) => {
