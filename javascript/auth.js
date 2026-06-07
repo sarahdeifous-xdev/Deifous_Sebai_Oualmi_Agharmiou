@@ -62,9 +62,10 @@ if (registerForm) {
     saveUsers(users);
 
     msg.style.color = "green";
-    msg.textContent = "Compte créé !";
+    msg.textContent = "Compte créé avec succès !";
 
     setTimeout(() => {
+      alert("Votre compte a été créé avec succès. Veuillez vous connecter.");
       window.location.href = "connexion.html";
     }, 1000);
   });
